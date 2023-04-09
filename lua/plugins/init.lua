@@ -180,7 +180,7 @@ local lazy_plugins = {
 	},
 	{
 		"norcalli/nvim-colorizer.lua",
-		lazy = true,
+		lazy = false,
 		config = require("plugins.configs.nvim-colorizer")
 	},
 }
