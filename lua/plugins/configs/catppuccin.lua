@@ -5,10 +5,11 @@ return function()
 		transparent_background = vim.g.neovide == nil,
 		integrations = {
 			treesitter = true,
+			ts_rainbow = true,
 			nvimtree = true,
 			notify = true,
 			telescope = true,
-			ts_rainbow = true,
+			cmp = true,
 		},
 		show_end_of_buffer = true,
 	})

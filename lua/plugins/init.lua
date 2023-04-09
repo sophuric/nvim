@@ -7,7 +7,7 @@ if not vim.loop.fs_stat(lazy_path) then
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
 		"--branch=stable",
-		lazy_path
+		lazy_path,
 	})
 end
 
@@ -63,6 +63,7 @@ local lazy_plugins = {
 	},
 	{
 		"akinsho/bufferline.nvim",
+		after = "catppuccin",
 		version = "v3.*",
 		dependencies = {
 			{ "nvim-tree/nvim-web-devicons" },
@@ -128,6 +129,7 @@ local lazy_plugins = {
 	},
 	{
 		"rcarriga/nvim-notify",
+		enabled = false,
 		lazy = true,
 		event = "VeryLazy",
 		config = require("plugins.configs.notify"),
@@ -175,7 +177,12 @@ local lazy_plugins = {
 				config = require("plugins.configs.lspsaga")
 			}
 		}
-	}
+	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		lazy = true,
+		config = require("plugins.configs.nvim-colorizer")
+	},
 }
 
 require("lazy").setup(lazy_plugins, lazy_settings)

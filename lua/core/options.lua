@@ -51,10 +51,12 @@ g.neovide_cursor_antialiasing = true
 g.neovide_transparency = 0.2
 g.neovide_cursor_vfx_mode = "railgun"
 
--- Automatically open nvim-tree on startup
-vim.cmd([[
-    augroup NvimTreeAutoOpen
-        autocmd!
-        autocmd VimEnter * NvimTreeToggle
-    augroup END
-]])
+-- Automatically open nvim-tree on startup if a file was specified
+if vim.fn.argc() > 0 then
+	vim.cmd([[
+		augroup NvimTreeAutoOpen
+			autocmd!
+			autocmd VimEnter * NvimTreeToggle
+		augroup END
+	]])
+end
