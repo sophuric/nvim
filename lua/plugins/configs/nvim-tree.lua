@@ -7,6 +7,7 @@ return function()
 		hijack_unnamed_buffer_when_opening = true,
 		sort_by = "case_sensitive",
 		sync_root_with_cwd = true,
+		respect_buf_cwd = true,
 		renderer = {
 			add_trailing = false,
 			group_empty = true,
@@ -93,6 +94,10 @@ return function()
 		hijack_directories = {
 			enable = true,
 			auto_open = true,
+		},
+		update_focused_file = {
+			enable = true,
+			update_root = true,
 		},
 	})
 end
