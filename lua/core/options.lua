@@ -29,8 +29,8 @@ o.mouse = "a"
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 
-foldenable = true
-foldlevelstart = 5
+o.foldenable = true
+o.foldlevelstart = 5
 
 -- Use terminal colours
 o.termguicolors = true

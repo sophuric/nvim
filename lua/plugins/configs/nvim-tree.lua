@@ -32,7 +32,7 @@ return function()
 			indent_markers = {
 				enable = true,
 				icons = {
-					corner = "└ ",
+					corner = "╰ ",
 					edge = "│ ",
 					item = "├ ",
 					none = "  ",
@@ -53,7 +53,7 @@ return function()
 			},
 		},
 		filters = {
-			dotfiles = true,
+			dotfiles = false,
 			exclude = { ".DS_Store", "Thumbs.db" },
 		},
 		trash = {

@@ -1,14 +1,14 @@
 -- Keybinds
 vim.g.mapleader = " "
 
-function map(mode, keystroke, out, desc)
+local function map(mode, keystroke, out, desc)
 	vim.api.nvim_set_keymap(mode, keystroke, out, {
 		noremap = true,
 		silent = true,
 		desc = desc,
 	})
 end
-function cmd(name, func)
+local function cmd(name, func)
 	vim.api.nvim_create_user_command(name, func, {})
 end
 

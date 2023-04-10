@@ -57,14 +57,14 @@ return function()
 	}
 
 	local function mason_handler(lsp)
-		local ok, custom_handler = pcall(require, "plugins.lsp." .. lsp_name)
+		local ok, custom_handler = pcall(require, "plugins.lsp." .. lsp)
 		if not ok then 
 			nvim_lsp[lsp].setup(opts)
 			return
 		elseif type(custom_handler) == "function" then
 			custom_handler(opts)
-		elseif type(custom_handler) == table then
-			nvim_lsp[lsp_name].setup(vim.tbl_deep_extend("force", opts, custom_handler))
+		elseif type(custom_handler) == "table" then
+			nvim_lsp[lsp].setup(vim.tbl_deep_extend("force", opts, custom_handler))
 		else
 			vim.notify(
 				string.format(
@@ -77,4 +77,6 @@ return function()
 			)
 		end
 	end
+
+	mason_lspconfig.setup_handlers({ mason_handler })
 end
