@@ -74,7 +74,7 @@ local lazy_plugins = {
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
-		lazy = true,
+		lazy = false,
 		cmd = {
 			"NvimTreeToggle",
 			"NvimTreeOpen",

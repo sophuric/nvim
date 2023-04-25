@@ -2,7 +2,7 @@ return vim.schedule_wrap(
 	function()
 		vim.api.nvim_set_option_value("foldmethod", "manual", {})
 		vim.api.nvim_set_option_value("foldexpr", "nvim_treesitter#foldexpr()", {})
-		
+
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = {
 				"bash",
@@ -29,7 +29,10 @@ return vim.schedule_wrap(
 				"gitignore",
 				"go",
 				"jq",
-			}
+			},
+			highlight = {
+				enable = true,
+			},
 		})
 		require("nvim-treesitter.install").prefer_git = true
 	end

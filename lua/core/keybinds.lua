@@ -2,11 +2,24 @@
 vim.g.mapleader = " "
 
 local function map(mode, keystroke, out, desc)
-	vim.api.nvim_set_keymap(mode, keystroke, out, {
-		noremap = true,
-		silent = true,
-		desc = desc,
-	})
+	if mode == "all" then
+		mode = { "n", "v", "x", "s", "o", "i", "l", "c", "t" }
+	end
+	if type(mode) ~= "table" then
+		mode = { mode }
+	end
+	if type(keystroke) ~= "table" then
+		keystroke = { keystroke }
+	end
+	for _, m in ipairs(mode) do
+		for _, k in ipairs(keystroke) do
+			vim.api.nvim_set_keymap(m, k, out, {
+				noremap = true,
+				silent = true,
+				desc = desc,
+			})
+		end
+	end
 end
 local function cmd(name, func)
 	vim.api.nvim_create_user_command(name, func, {})
@@ -21,6 +34,9 @@ map("n", "<C-Right>", ":BufferLineCycleNext<CR>", "Next Tab")
 map("n", "<C-Left>", ":BufferLineCyclePrev<CR>", "Previous tab")
 map("n", "<C-W>", ":bd<CR>", "Close buffer")
 map("n", "<C-T>", ":enew<CR>", "New buffer")
+
+-- Disable middle mouse button paste
+map("all", { "<MiddleMouse>", "<2-MiddleMouse>", "<3-MiddleMouse>", "<4-MiddleMouse>" }, "")
 
 -- Functions
 cmd("FindProjects", function()
