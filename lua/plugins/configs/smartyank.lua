@@ -11,7 +11,7 @@ return function()
 		},
 		osc52 = {
 			enabled = true,
-			ssh_only = true,
+			ssh_only = false,
 			silent = false,
 			echo_hl = "Directory"
 		},
