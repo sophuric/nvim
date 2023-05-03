@@ -48,7 +48,7 @@ g.neovide_refresh_rate = 60
 g.neovide_cursor_animation_length = 0.03
 g.neovide_cursor_trail_length = 0.05
 g.neovide_cursor_antialiasing = true
-g.neovide_transparency = 0.2
+--g.neovide_transparency = 0.2
 g.neovide_cursor_vfx_mode = "railgun"
 
 -- Automatically open nvim-tree on startup if a file was specified

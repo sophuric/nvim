@@ -184,6 +184,11 @@ local lazy_plugins = {
 		lazy = false,
 		config = require("plugins.configs.nvim-colorizer")
 	},
+	{
+		"petertriho/nvim-scrollbar",
+		lazy = false,
+		config = require("plugins.configs.nvim-scrollbar")
+	}
 }
 
 require("lazy").setup(lazy_plugins, lazy_settings)
