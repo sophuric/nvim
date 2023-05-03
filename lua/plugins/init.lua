@@ -29,13 +29,6 @@ local lazy_settings = {
 -- Lazy plugins
 local lazy_plugins = {
 	{
-		"goolord/alpha-nvim",
-		lazy = true,
-		event = "BufWinEnter",
-		config = require("plugins.configs.alpha"),
-		enabled = false,
-	},
-	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		config = require("plugins.configs.catppuccin"),
@@ -68,7 +61,7 @@ local lazy_plugins = {
 		dependencies = {
 			{ "nvim-tree/nvim-web-devicons" },
 		},
-		lazy = true,
+		lazy = false,
 		event = { "BufReadPost", "BufAdd", "BufNewFile" },
 		config = require("plugins.configs.bufferline"),
 	},
@@ -85,7 +78,7 @@ local lazy_plugins = {
 		dependencies = {
 			{ "nvim-tree/nvim-web-devicons" },
 		},
-		config = require("plugins.configs.nvim-tree"),
+		config = require("plugins.configs.tree"),
 	},
 	{
 		"ibhagwan/smartyank.nvim",
@@ -136,7 +129,7 @@ local lazy_plugins = {
 	},
 	{
 		"nvim-lualine/lualine.nvim",
-		lazy = true,
+		lazy = false,
 		event = { "BufReadPost", "BufAdd", "BufNewFile" },
 		config = require("plugins.configs.lualine"),
 	},
@@ -161,7 +154,7 @@ local lazy_plugins = {
 			{ "onsails/lspkind.nvim" },
 			{ "saadparwaiz1/cmp_luasnip" },
 			{ "kdheepak/cmp-latex-symbols" },
-		}
+		},
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -176,19 +169,19 @@ local lazy_plugins = {
 			{
 				"glepnir/lspsaga.nvim",
 				config = require("plugins.configs.lspsaga")
-			}
-		}
+			},
+		},
 	},
 	{
 		"norcalli/nvim-colorizer.lua",
 		lazy = false,
-		config = require("plugins.configs.nvim-colorizer")
+		config = require("plugins.configs.colorizer"),
 	},
 	{
 		"petertriho/nvim-scrollbar",
 		lazy = false,
-		config = require("plugins.configs.nvim-scrollbar")
-	}
+		config = require("plugins.configs.scrollbar"),
+	},
 }
 
 require("lazy").setup(lazy_plugins, lazy_settings)

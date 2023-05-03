@@ -25,15 +25,23 @@ local function cmd(name, func)
 	vim.api.nvim_create_user_command(name, func, {})
 end
 
--- Tab keybinds
+-- Tab keybinds, some are overriden by my kitty config, but not in neovide
 map("n", "<C-`>", ":BufferLineCycleNext<CR>", "Next tab")
 map("n", "<C-S-`>", ":BufferLineCyclePrev<CR>", "Previous tab")
+map("n", "<C-Tab>", ":BufferLineCycleNext<CR>", "Next tab")
+map("n", "<C-S-Tab>", ":BufferLineCyclePrev<CR>", "Previous tab")
 map("n", "<C-.>", ":BufferLineMoveNext<CR>", "Move tab right")
+map("n", "<C-S-.>", ":BufferLineMoveNext<CR>", "Move tab right")
 map("n", "<C-,>", ":BufferLineMovePrev<CR>", "Move tab left")
+map("n", "<C-S-,>", ":BufferLineMovePrev<CR>", "Move tab left")
 map("n", "<C-Right>", ":BufferLineCycleNext<CR>", "Next Tab")
+map("n", "<C-S-Right>", ":BufferLineCycleNext<CR>", "Next Tab")
 map("n", "<C-Left>", ":BufferLineCyclePrev<CR>", "Previous tab")
+map("n", "<C-S-Left>", ":BufferLineCyclePrev<CR>", "Previous tab")
 map("n", "<C-W>", ":bd<CR>", "Close buffer")
+map("n", "<C-S-W>", ":bd<CR>", "Close buffer")
 map("n", "<C-T>", ":enew<CR>", "New buffer")
+map("n", "<C-S-T>", ":enew<CR>", "New buffer")
 
 -- Disable middle mouse button paste
 map("all", { "<MiddleMouse>", "<2-MiddleMouse>", "<3-MiddleMouse>", "<4-MiddleMouse>" }, "")
