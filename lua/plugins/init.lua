@@ -135,7 +135,7 @@ local lazy_plugins = {
 	},
 	{
 		"hrsh7th/nvim-cmp",
-		lazy = true,
+		lazy = false,
 		event = "InsertEnter",
 		config = require("plugins.configs.cmp"),
 		dependencies = {
@@ -158,7 +158,7 @@ local lazy_plugins = {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		lazy = true,
+		lazy = false,
 		event = { "BufReadPost", "BufAdd", "BufNewFile" },
 		config = require("plugins.configs.lsp"),
 		dependencies = {
@@ -182,6 +182,10 @@ local lazy_plugins = {
 		lazy = false,
 		config = require("plugins.configs.scrollbar"),
 	},
+	{
+		"https://github.com/github/copilot.vim",
+		lazy = false,
+	}
 }
 
 require("lazy").setup(lazy_plugins, lazy_settings)

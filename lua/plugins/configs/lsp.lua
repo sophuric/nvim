@@ -32,7 +32,8 @@ return function()
 			"tsserver",
 			"cmake",
 			"cssls",
-			"csharp_ls"
+--			"csharp_ls",
+--			"jdtls"
 		}
 	})
 
@@ -58,7 +59,7 @@ return function()
 
 	local function mason_handler(lsp)
 		local ok, custom_handler = pcall(require, "plugins.lsp." .. lsp)
-		if not ok then 
+		if not ok then
 			nvim_lsp[lsp].setup(opts)
 			return
 		elseif type(custom_handler) == "function" then

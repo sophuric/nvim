@@ -43,6 +43,12 @@ map("n", "<C-S-W>", ":bd<CR>", "Close buffer")
 map("n", "<C-T>", ":enew<CR>", "New buffer")
 map("n", "<C-S-T>", ":enew<CR>", "New buffer")
 
+-- Paste and copy
+map("n", "<C-S-C>", "yy", "Copy")
+map("v", "<C-S-C>", "y", "Copy")
+map("n", "<C-S-V>", "vpi", "Paste")
+map("i", "<C-S-V>", "<ESC>vpi", "Paste")
+
 -- Disable middle mouse button paste
 map("all", { "<MiddleMouse>", "<2-MiddleMouse>", "<3-MiddleMouse>", "<4-MiddleMouse>" }, "")
 
