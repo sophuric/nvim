@@ -8,6 +8,6 @@ return function()
 			cpp = { require("formatter.filetypes.cpp").clangformat },
 			json = { require("formatter.filetypes.json").jq },
 			["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
-		}
+		},
 	})
 end

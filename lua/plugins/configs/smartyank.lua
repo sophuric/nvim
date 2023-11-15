@@ -13,7 +13,7 @@ return function()
 			enabled = true,
 			ssh_only = true,
 			silent = false,
-			echo_hl = "Directory"
+			echo_hl = "Directory",
 		},
 	})
 end

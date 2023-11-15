@@ -34,8 +34,8 @@ return function()
 				max_height = 20,
 			},
 			documentation = {
-				border = border("CmpDocBorder")
-			}
+				border = border("CmpDocBorder"),
+			},
 		},
 		sorting = {
 			priority_weight = 2,
@@ -65,7 +65,7 @@ return function()
 					kind.menu = "	 (" .. strings[2] .. ")"
 				end
 				return kind
-			end
+			end,
 		},
 		snippet = {
 			expand = function(args)
@@ -75,22 +75,22 @@ return function()
 		mapping = {
 			["<C-CR>"] = cmp.mapping.complete(),
 			["<CR>"] = cmp.mapping.confirm({
-			  select = true,
-			  behavior = cmp.ConfirmBehavior.replace,
+				select = true,
+				behavior = cmp.ConfirmBehavior.replace,
 			}),
 			["<Tab>"] = cmp.mapping(function(fallback)
-			  if cmp.visible() then
-				cmp.select_next_item()
-			  else
-				fallback()
-			  end
+				if cmp.visible() then
+					cmp.select_next_item()
+				else
+					fallback()
+				end
 			end, { "i", "s" }),
 			["<S-Tab>"] = cmp.mapping(function(fallback)
-			  if cmp.visible() then
-				cmp.select_prev_item()
-			  else
-				fallback()
-			  end
+				if cmp.visible() then
+					cmp.select_prev_item()
+				else
+					fallback()
+				end
 			end, { "i", "s" }),
 		},
 		sources = {

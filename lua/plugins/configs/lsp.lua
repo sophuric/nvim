@@ -32,9 +32,9 @@ return function()
 			"tsserver",
 			"cmake",
 			"cssls",
---			"csharp_ls",
---			"jdtls"
-		}
+			--			"csharp_ls",
+			--			"jdtls"
+		},
 	})
 
 	local capabilities = vim.lsp.protocol.make_client_capabilities()

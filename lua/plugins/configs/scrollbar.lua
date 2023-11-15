@@ -3,7 +3,7 @@ return function()
 
 	require("scrollbar").setup({
 		handle = {
-			color = ctp.surface1
+			color = ctp.surface1,
 		},
 		marks = {
 			Search = { color = ctp.peach },
@@ -12,6 +12,6 @@ return function()
 			Info = { color = ctp.blue },
 			Hint = { color = ctp.green },
 			Misc = { color = ctp.purple },
-		}
+		},
 	})
 end

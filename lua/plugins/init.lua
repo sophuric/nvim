@@ -162,7 +162,7 @@ local lazy_plugins = {
 			{ "williamboman/mason-lspconfig.nvim" },
 			{
 				"glepnir/lspsaga.nvim",
-				config = require("plugins.configs.lspsaga")
+				config = require("plugins.configs.lspsaga"),
 			},
 		},
 	},
@@ -184,7 +184,7 @@ local lazy_plugins = {
 		"mhartington/formatter.nvim",
 		lazy = false,
 		config = require("plugins.configs.formatter"),
-	}
+	},
 }
 
 require("lazy").setup(lazy_plugins, lazy_settings)

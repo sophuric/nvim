@@ -1,6 +1,6 @@
 return function()
 	require("colorizer").setup({
-		"*"
+		"*",
 	}, {
 		mode = "background",
 		RGB = true,

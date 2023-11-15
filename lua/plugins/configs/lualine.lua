@@ -57,6 +57,6 @@ return function()
 			"nvim-tree",
 			"fugitive",
 			"toggleterm",
-		}
+		},
 	})
 end

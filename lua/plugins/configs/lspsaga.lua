@@ -67,7 +67,7 @@ return function()
 		},
 		hover = {
 			open_link = "gl",
-			open_browser = "silent !librewolf"
+			open_browser = "silent !librewolf",
 		},
 		outline = {
 			win_position = "right",
@@ -94,7 +94,7 @@ return function()
 		},
 		ui = {
 			border = "single",
-			winblend = 0
-		}
+			winblend = 0,
+		},
 	})
 end

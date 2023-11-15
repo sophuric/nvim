@@ -69,30 +69,29 @@ return function()
 			callback = function()
 				require("telescope").extensions.projects.projects({})
 			end,
-		})
+		}),
 	}
 	dashboard.section.buttons.opts.hl = "String"
-	
+
 	function footer()
 		local stats = require("lazy").stats()
 		local ms = (math.floor(stats.startuptime * 10 + 0.5) / 10)
 		return "Neovim"
-		.. "   v"
-		.. vim.version().major
-		.. "."
-		.. vim.version().minor
-		.. "."
-		.. vim.version().patch
-		.. "   "
-		.. stats.count
-		.. " plugins in "
-		.. ms
-		.. "ms"
+			.. "   v"
+			.. vim.version().major
+			.. "."
+			.. vim.version().minor
+			.. "."
+			.. vim.version().patch
+			.. "   "
+			.. stats.count
+			.. " plugins in "
+			.. ms
+			.. "ms"
 	end
 
 	dashboard.section.footer.val = footer()
 	dashboard.section.footer.opts.hl = "Function"
-
 
 	local head_butt_padding = 2
 	local occu_height = #dashboard.section.header.val + 2 * #dashboard.section.buttons.val + head_butt_padding

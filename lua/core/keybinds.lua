@@ -80,7 +80,7 @@ end)
 map("n", "fr", ":FindProjects<CR>", "Find projects")
 map("n", "fh", ":FileHistory<CR>", "Search File History")
 
-map("n", "<C-/>", ":let @/ = \"\"<CR>", "Clear search query")
+map("n", "<C-/>", ':let @/ = ""<CR>', "Clear search query")
 map("n", "<C-Up>", "g<Up>", "Go up visual line")
 map("n", "<C-Down>", "g<Down>", "Go down visual line")
 map("n", "<C-Backspace>", "db", "Backspace word")
