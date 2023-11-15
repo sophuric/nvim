@@ -183,6 +183,7 @@ local lazy_plugins = {
 	{
 		"mhartington/formatter.nvim",
 		lazy = false,
+		config = require("plugins.configs.formatter"),
 	}
 }
 
