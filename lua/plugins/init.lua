@@ -33,10 +33,11 @@ local lazy_plugins = {
 		name = "catppuccin",
 		config = require("plugins.configs.catppuccin"),
 		priority = 99,
+		lazy = false,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
-		lazy = true,
+		lazy = false,
 		build = function()
 			if #vim.api.nvim_list_uis() ~= 0 then
 				vim.api.nvim_command("TSUpdate")
@@ -121,13 +122,6 @@ local lazy_plugins = {
 		},
 	},
 	{
-		"rcarriga/nvim-notify",
-		enabled = false,
-		lazy = true,
-		event = "VeryLazy",
-		config = require("plugins.configs.notify"),
-	},
-	{
 		"nvim-lualine/lualine.nvim",
 		lazy = false,
 		event = { "BufReadPost", "BufAdd", "BufNewFile" },
@@ -183,7 +177,11 @@ local lazy_plugins = {
 		config = require("plugins.configs.scrollbar"),
 	},
 	{
-		"https://github.com/github/copilot.vim",
+		"github/copilot.vim",
+		lazy = false,
+	},
+	{
+		"mhartington/formatter.nvim",
 		lazy = false,
 	}
 }
