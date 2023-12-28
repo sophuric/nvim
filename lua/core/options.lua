@@ -64,4 +64,5 @@ g.neovide_cursor_vfx_mode = "railgun"
 vim.cmd("autocmd BufRead,BufNewFile *.fsh set filetype=c")
 vim.cmd("autocmd BufRead,BufNewFile *.vsh set filetype=c")
 vim.cmd("autocmd BufRead,BufNewFile *.glsl set filetype=c")
+vim.cmd("autocmd BufRead,BufNewFile *.frag set filetype=c")
 vim.cmd("autocmd BufRead,BufNewFile *.cu set filetype=c")
