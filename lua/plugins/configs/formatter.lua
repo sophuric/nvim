@@ -9,6 +9,8 @@ return function()
 			json = { require("formatter.filetypes.json").jq },
 			sh = { require("formatter.filetypes.sh").shfmt },
 			javascript = { require("formatter.filetypes.javascript").eslint_d },
+			html = { require("formatter.filetypes.html").tidy },
+			css = { require("formatter.filetypes.css").cssbeautify },
 			["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 		},
 	})

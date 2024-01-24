@@ -185,6 +185,13 @@ local lazy_plugins = {
 		lazy = false,
 		config = require("plugins.configs.formatter"),
 	},
+	{
+		"filipdutescu/renamer.nvim",
+		config = require("plugins.configs.renamer"),
+		dependencies = {
+			{ "nvim-lua/plenary.nvim" },
+		},
+	},
 }
 
 require("lazy").setup(lazy_plugins, lazy_settings)
