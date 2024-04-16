@@ -192,6 +192,11 @@ local lazy_plugins = {
 			{ "nvim-lua/plenary.nvim" },
 		},
 	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = require("plugins.configs.autopairs"),
+	},
 }
 
 require("lazy").setup(lazy_plugins, lazy_settings)
