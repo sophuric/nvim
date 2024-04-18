@@ -13,6 +13,17 @@ end
 
 vim.opt.rtp:prepend(lazy_path)
 
+-- Hacky as fuck fix to make image plugin work
+
+local lr_path = vim.fn.system("luarocks path --global --lr-path")
+local lr_cpath = vim.fn.system("luarocks path --global --lr-cpath")
+if lr_path then
+	package.path = package.path .. ";" .. lr_path
+end
+if lr_cpath then
+	package.cpath = package.cpath .. ";" .. lr_cpath
+end
+
 -- Lazy settings
 local lazy_settings = {
 	git = {
@@ -30,10 +41,10 @@ local lazy_settings = {
 local lazy_plugins = {
 	{
 		"catppuccin/nvim",
+		lazy = false,
 		name = "catppuccin",
 		config = require("plugins.configs.catppuccin"),
 		priority = 99,
-		lazy = false,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -43,7 +54,7 @@ local lazy_plugins = {
 				vim.api.nvim_command("TSUpdate")
 			end
 		end,
-		event = { "CursorHold", "CursorHoldI" },
+		event = { "BufReadPre" },
 		dependencies = {
 			{ "andymass/vim-matchup" },
 			{ "mrjones2014/nvim-ts-rainbow" },
@@ -196,6 +207,18 @@ local lazy_plugins = {
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		config = require("plugins.configs.autopairs"),
+	},
+	{
+		"rcarriga/nvim-notify",
+		lazy = true,
+		event = "VeryLazy",
+		config = require("plugins.configs.notify"),
+	},
+	{
+		"3rd/image.nvim",
+		lazy = true,
+		event = "VeryLazy",
+		config = require("plugins.configs.image"),
 	},
 }
 

@@ -1,4 +1,8 @@
 return {
-	cmd = { "ltex-ls" },
-	filetypes = { "markdown", "text" },
+	filetypes = { "text" },
+	settings = {
+		ltex = {
+			language = "en-AU",
+		},
+	},
 }

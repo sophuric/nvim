@@ -32,6 +32,7 @@ return function()
 			"tsserver",
 			"cmake",
 			"cssls",
+			"ltex",
 			--			"csharp_ls",
 			--			"jdtls"
 		},
