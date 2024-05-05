@@ -220,6 +220,11 @@ local lazy_plugins = {
 		event = "VeryLazy",
 		config = require("plugins.configs.image"),
 	},
+	{
+		"numToStr/Comment.nvim",
+		opts = require("plugins.configs.comment"),
+		lazy = false,
+	},
 }
 
 require("lazy").setup(lazy_plugins, lazy_settings)
