@@ -11,6 +11,8 @@ return function()
 			javascript = { require("formatter.filetypes.javascript").eslint_d },
 			html = { require("formatter.filetypes.html").tidy },
 			css = { require("formatter.filetypes.css").cssbeautify },
+			yaml = { require("formatter.filetypes.yaml").pyaml },
+			xml = { require("formatter.filetypes.xml").xmllint },
 			["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 		},
 	})
