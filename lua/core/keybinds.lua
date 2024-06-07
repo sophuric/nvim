@@ -94,3 +94,5 @@ map("n", "<C-F>", "/", "Search")
 map("n", "<C-U>", "<cmd>set nowrap!<CR>", "Toggle word wrapping")
 map("n", "<C-S>", "<cmd>w<CR>", "Save")
 map("n", "<C-K><C-D>", "<cmd>Format<CR>", "Format")
+
+map("n", "!!", "zf%", "Fold brackets")
