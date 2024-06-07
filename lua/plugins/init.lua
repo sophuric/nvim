@@ -69,7 +69,6 @@ local lazy_plugins = {
 	{
 		"akinsho/bufferline.nvim",
 		after = "catppuccin",
-		version = "v3.*",
 		dependencies = {
 			{ "nvim-tree/nvim-web-devicons" },
 		},

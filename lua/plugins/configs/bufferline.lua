@@ -1,7 +1,7 @@
 return function()
 	local ctp = require("catppuccin.palettes").get_palette()
 
-	require("bufferline").setup({
+	return require("bufferline").setup({
 		options = {
 			max_name_length = 14,
 			max_prefix_length = 10,
@@ -10,7 +10,7 @@ return function()
 			color_icons = true,
 			show_buffer_icons = true,
 			show_buffer_close_icons = true,
-			show_buffer_default_icon = true,
+
 			show_close_icon = true,
 			show_tab_indicators = true,
 

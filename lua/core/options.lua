@@ -6,7 +6,6 @@ local o, g = vim.o, vim.g
 -- Line numbers
 o.number = true
 o.relativenumber = true
-o.number = 2
 
 -- Clipboard
 o.clipboard = "unnamedplus"
