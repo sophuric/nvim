@@ -72,8 +72,8 @@ map("all", { "<MiddleMouse>", "<2-MiddleMouse>", "<3-MiddleMouse>", "<4-MiddleMo
 -- Other keybinds
 map("n", "<C-O>", "<cmd>NvimTreeToggle<CR>", "Toggle tree view")
 map("n", "<C-S-O>", "<cmd>NvimTreeFindFile<CR>", "Focus current file in tree view")
-map("n", "<C-D>", "<cmd>ToggleTerm direction=horizontal<CR>", "Toggle terminal")
-map("n", "<C-G>", function()
+map("n", { "<C-D>", "<Leader>t" }, "<cmd>ToggleTerm direction=horizontal<CR>", "Toggle terminal")
+map("n", "<Leader>g", function()
 	local line = vim.fn.input("Go to line: ")
 	if tonumber(line, 10) ~= nil then
 		vim.cmd("<cmd>" .. line)
@@ -98,6 +98,6 @@ map("n", "<C-Delete>", "dw", "Delete word")
 map("n", "<C-F>", "/", "Search")
 map("n", "<C-U>", "<cmd>set nowrap!<CR>", "Toggle word wrapping")
 map("n", "<C-S>", "<cmd>w<CR>", "Save")
-map("n", "<C-K><C-D>", "<cmd>Format<CR>", "Format")
+map({ "n", "v" }, "<C-K><C-D>", "<cmd>Format<CR>", "Format")
 
-map("n", "!!", "zf%", "Fold brackets")
+map("n", "<Leader>f", "zf%", "Fold brackets")
