@@ -93,6 +93,7 @@ return function()
 			frequency = 12,
 		},
 		ui = {
+			kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
 			border = "single",
 			winblend = 0,
 		},

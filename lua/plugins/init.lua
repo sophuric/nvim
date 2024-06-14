@@ -224,6 +224,10 @@ local lazy_plugins = {
 		opts = require("plugins.configs.comment"),
 		lazy = false,
 	},
+	{
+		"lewis6991/gitsigns.nvim",
+		opts = require("plugins.configs.gitsigns"),
+	},
 }
 
 require("lazy").setup(lazy_plugins, lazy_settings)
