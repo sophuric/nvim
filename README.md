@@ -2,14 +2,14 @@ Neovim config
 
 Required packages:
 - `imagemagick` `lua51` `luarocks`
-- `gopls` `pyright` `eslint` `eslint_d` `tree-sitter` `typescript-language-server` `clang` `go` `ltex-ls-bin` `libxml2`
+- `gopls` `pyright` `eslint` `eslint_d` `tree-sitter` `typescript-language-server` `clang` `go` `ltex-ls` `libxml2` `shfmt` `jq` `stylua` `tidy` (language servers and formatters)
 - `python3`
-- `pyaml` (from pip) or `python-pyaml` (from pacman)
+- `pyaml` `cssbeautifier` (from pip) or `python-pyaml` `python-cssbeautifier` (from pacman)
 - `npm` `unzip` `zip`
 - `magick` (from luarocks, see below)
 
 Install using pacman:
-- `pacman -S imagemagick luarocks gopls pyright eslint eslint_d tree-sitter typescript-language-server clang unzip zip go python python-pyaml npm` (as root)
+- `pacman -S imagemagick lua51 luarocks gopls pyright eslint eslint_d tree-sitter typescript-language-server clang go libxml2 shfmt jq stylua tidy python3 python-pyaml python-cssbeautifier npm unzip zip` (as root)
 - `paru -S ltex-ls-bin` (from AUR)
 
 Install using luarocks:
