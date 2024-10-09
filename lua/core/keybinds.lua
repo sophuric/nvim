@@ -72,7 +72,7 @@ map("all", { "<MiddleMouse>", "<2-MiddleMouse>", "<3-MiddleMouse>", "<4-MiddleMo
 -- Other keybinds
 map("n", "<C-O>", "<cmd>NvimTreeToggle<CR>", "Toggle tree view")
 map("n", "<C-S-O>", "<cmd>NvimTreeFindFile<CR>", "Focus current file in tree view")
-map("n", { "<C-D>", "<Leader>t" }, "<cmd>ToggleTerm direction=horizontal<CR>", "Toggle terminal")
+map("n", { "<D-s>", "<D-S>", "<Leader>t" }, "<cmd>ToggleTerm direction=horizontal<CR>", "Toggle terminal")
 map("n", "<Leader>g", function()
 	local line = vim.fn.input("Go to line: ")
 	if tonumber(line, 10) ~= nil then
