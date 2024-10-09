@@ -29,7 +29,7 @@ return function()
 			"lua_ls",
 			"pyright",
 			"gopls",
-			"tsserver",
+			"ts_ls",
 			"cmake",
 			"cssls",
 			"ltex",
