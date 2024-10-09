@@ -1,5 +1,10 @@
 return function()
 	require("catppuccin").setup({
+		custom_highlights = function(colors)
+			return {
+				LineNr = { fg = colors.overlay1 },
+			}
+		end,
 		flavour = "mocha",
 		term_colors = true,
 		transparent_background = vim.g.neovide == nil,
