@@ -13,17 +13,6 @@ end
 
 vim.opt.rtp:prepend(lazy_path)
 
--- Hacky as fuck fix to make image plugin work
-
-local lr_path = vim.fn.system("luarocks path --global --lr-path")
-local lr_cpath = vim.fn.system("luarocks path --global --lr-cpath")
-if lr_path then
-	package.path = package.path .. ";" .. lr_path
-end
-if lr_cpath then
-	package.cpath = package.cpath .. ";" .. lr_cpath
-end
-
 -- Lazy settings
 local lazy_settings = {
 	git = {
@@ -212,12 +201,6 @@ local lazy_plugins = {
 		lazy = true,
 		event = "VeryLazy",
 		config = require("plugins.configs.notify"),
-	},
-	{
-		"3rd/image.nvim",
-		lazy = true,
-		event = "VeryLazy",
-		config = require("plugins.configs.image"),
 	},
 	{
 		"numToStr/Comment.nvim",
