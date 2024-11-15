@@ -212,6 +212,11 @@ local lazy_plugins = {
 		opts = require("plugins.configs.gitsigns"),
 	},
 	{
+		"mcauley-penney/visual-whitespace.nvim",
+		config = true,
+		opts = require("plugins.configs.visualwhitespace"),
+	},
+	{
 		"m4xshen/hardtime.nvim",
 		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
 		opts = require("plugins.configs.hardtime"),
