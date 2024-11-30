@@ -13,6 +13,8 @@ return function()
 			css = { require("formatter.filetypes.css").cssbeautify },
 			yaml = { require("formatter.filetypes.yaml").pyaml },
 			xml = { require("formatter.filetypes.xml").xmllint },
+			perl = { require("formatter.filetypes.perl").perltidy },
+			python = { require("formatter.filetypes.python").black },
 			["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 		},
 	})
