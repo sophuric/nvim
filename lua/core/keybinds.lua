@@ -8,7 +8,7 @@ local function cmd(name, func)
 	vim.api.nvim_create_user_command(id, func, {})
 	return id
 end
-local function map(mode, keystroke, out, desc)
+local function map(mode, keystroke, out, desc, ...)
 	if mode == "all" then
 		mode = { "n", "v", "x", "s", "o", "i", "l", "c", "t" }
 	end
@@ -22,13 +22,19 @@ local function map(mode, keystroke, out, desc)
 		local id = cmd(desc, out)
 		out = "<cmd>" .. id .. "<CR>"
 	end
+
+	local args = { ... }
+	if args[1] == nil then
+		args[1] = {}
+	end
+
 	for _, m in ipairs(mode) do
 		for _, k in ipairs(keystroke) do
-			vim.api.nvim_set_keymap(m, k, out, {
+			vim.api.nvim_set_keymap(m, k, out, vim.tbl_extend("force", {
 				noremap = true,
 				silent = true,
 				desc = desc,
-			})
+			}, args[1]))
 		end
 	end
 end
@@ -91,11 +97,12 @@ map("n", "fh", function()
 end, "File history")
 
 map("n", "<C-/>", '<cmd>let @/ = ""<CR>', "Clear search query")
+map("n", "<C-S-/>", '/\\<\\><Left><Left>', "Search word", { silent = false })
 map("n", "<C-Up>", "g<Up>", "Go up visual line")
 map("n", "<C-Down>", "g<Down>", "Go down visual line")
 map("n", "<C-Backspace>", "db", "Backspace word")
 map("n", "<C-Delete>", "dw", "Delete word")
-map("n", "<C-F>", "/", "Search")
+map("n", "<C-F>", "/", "Search", { silent = false })
 map("n", "<C-U>", "<cmd>set nowrap!<CR>", "Toggle word wrapping")
 map("n", "<C-S>", "<cmd>w<CR>", "Save")
 map({ "n", "v" }, "<C-K><C-D>", "<cmd>Format<CR>", "Format")
