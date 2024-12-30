@@ -221,6 +221,11 @@ local lazy_plugins = {
 		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
 		opts = require("plugins.configs.hardtime"),
 	},
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+		opts = {},
+	},
 }
 
 require("lazy").setup(lazy_plugins, lazy_settings)
