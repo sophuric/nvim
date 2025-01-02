@@ -11,7 +11,7 @@ return function()
 			javascript = { require("formatter.filetypes.javascript").eslint_d },
 			html = { require("formatter.filetypes.html").tidy },
 			css = { require("formatter.filetypes.css").cssbeautify },
-			yaml = { require("formatter.filetypes.yaml").pyaml },
+			yaml = { require("formatter.filetypes.yaml").yamlfmt },
 			xml = { require("formatter.filetypes.xml").xmllint },
 			perl = { require("formatter.filetypes.perl").perltidy },
 			python = { require("formatter.filetypes.python").black },
