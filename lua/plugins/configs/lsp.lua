@@ -20,7 +20,7 @@ return function()
 	})
 
 	mason_lspconfig.setup({
-		-- full list at https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/server_configurations
+		-- full list at https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/configs
 		ensure_installed = {
 			"bashls",
 			"clangd",
