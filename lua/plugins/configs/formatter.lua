@@ -1,4 +1,16 @@
 return function()
+	local js = {
+		function()
+			return {
+				exe = "eslint",
+				args = {
+					"--fix",
+				},
+				stdin = false,
+				try_node_modules = true,
+			}
+		end,
+	}
 	require("formatter").setup({
 		logging = true,
 		log_level = vim.log.levels.WARN,
@@ -8,18 +20,8 @@ return function()
 			cpp = { require("formatter.filetypes.cpp").clangformat },
 			json = { require("formatter.filetypes.json").jq },
 			sh = { require("formatter.filetypes.sh").shfmt },
-			javascript = {
-				function()
-					return {
-						exe = "eslint",
-						args = {
-							"--fix",
-						},
-						stdin = false,
-						try_node_modules = true,
-					}
-				end,
-			},
+			typescript = js,
+			javascript = js,
 			html = { require("formatter.filetypes.html").tidy },
 			css = { require("formatter.filetypes.css").cssbeautify },
 			yaml = { require("formatter.filetypes.yaml").yamlfmt },
