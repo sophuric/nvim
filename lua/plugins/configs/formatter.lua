@@ -8,7 +8,18 @@ return function()
 			cpp = { require("formatter.filetypes.cpp").clangformat },
 			json = { require("formatter.filetypes.json").jq },
 			sh = { require("formatter.filetypes.sh").shfmt },
-			javascript = { require("formatter.filetypes.javascript").eslint_d },
+			javascript = {
+				function()
+					return {
+						exe = "eslint",
+						args = {
+							"--fix",
+						},
+						stdin = false,
+						try_node_modules = true,
+					}
+				end,
+			},
 			html = { require("formatter.filetypes.html").tidy },
 			css = { require("formatter.filetypes.css").cssbeautify },
 			yaml = { require("formatter.filetypes.yaml").yamlfmt },
