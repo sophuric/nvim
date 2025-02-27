@@ -217,11 +217,6 @@ local lazy_plugins = {
 		opts = require("plugins.configs.visualwhitespace"),
 	},
 	{
-		"m4xshen/hardtime.nvim",
-		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-		opts = require("plugins.configs.hardtime"),
-	},
-	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
 		opts = {},
