@@ -18,6 +18,7 @@ return function()
 			lua = { require("formatter.filetypes.lua").stylua },
 			c = { require("formatter.filetypes.c").clangformat },
 			cpp = { require("formatter.filetypes.cpp").clangformat },
+			cs = { require("formatter.filetypes.cs").dotnetformat },
 			json = { require("formatter.filetypes.json").jq },
 			sh = { require("formatter.filetypes.sh").shfmt },
 			typescript = js,
