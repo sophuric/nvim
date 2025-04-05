@@ -14,6 +14,7 @@ return function()
 	require("formatter").setup({
 		logging = true,
 		log_level = vim.log.levels.WARN,
+		-- full list at https://github.com/mhartington/formatter.nvim/tree/master/lua/formatter/filetypes
 		filetype = {
 			lua = { require("formatter.filetypes.lua").stylua },
 			c = { require("formatter.filetypes.c").clangformat },
@@ -21,6 +22,7 @@ return function()
 			cs = { require("formatter.filetypes.cs").dotnetformat },
 			json = { require("formatter.filetypes.json").jq },
 			sh = { require("formatter.filetypes.sh").shfmt },
+			rust = { require("formatter.filetypes.rust").rustfmt },
 			typescript = js,
 			javascript = js,
 			html = { require("formatter.filetypes.html").tidy },
