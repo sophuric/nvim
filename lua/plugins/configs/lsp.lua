@@ -33,6 +33,7 @@ return function()
 			"cmake",
 			"cssls",
 			"ltex",
+			"rust_analyzer",
 			--			"csharp_ls",
 			--			"jdtls"
 		},
