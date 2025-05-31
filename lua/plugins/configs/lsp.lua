@@ -19,26 +19,6 @@ return function()
 		},
 	})
 
-	mason_lspconfig.setup({
-		-- full list at https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/configs
-		ensure_installed = {
-			"bashls",
-			"clangd",
-			"html",
-			"jsonls",
-			"lua_ls",
-			"pyright",
-			"gopls",
-			"ts_ls",
-			"cmake",
-			"cssls",
-			"ltex",
-			"rust_analyzer",
-			--			"csharp_ls",
-			--			"jdtls"
-		},
-	})
-
 	local capabilities = vim.lsp.protocol.make_client_capabilities()
 	capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
@@ -81,5 +61,26 @@ return function()
 		end
 	end
 
-	mason_lspconfig.setup_handlers({ mason_handler })
+	mason_lspconfig.setup({
+		-- full list at https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/configs
+		ensure_installed = {
+			"bashls",
+			"clangd",
+			"html",
+			"jsonls",
+			"lua_ls",
+			"pyright",
+			"gopls",
+			"ts_ls",
+			"cmake",
+			"cssls",
+			"ltex",
+			"rust_analyzer",
+			--			"csharp_ls",
+			--			"jdtls"
+		},
+		handlers = {
+			mason_handler
+		}
+	})
 end
