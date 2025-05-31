@@ -221,6 +221,11 @@ local lazy_plugins = {
 		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
 		opts = {},
 	},
+	{
+		"folke/trouble.nvim",
+		opts = {},
+		cmd = "Trouble"
+	},
 }
 
 require("lazy").setup(lazy_plugins, lazy_settings)

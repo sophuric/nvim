@@ -65,3 +65,6 @@ vim.cmd("autocmd BufRead,BufNewFile *.vsh set filetype=c")
 vim.cmd("autocmd BufRead,BufNewFile *.glsl set filetype=c")
 vim.cmd("autocmd BufRead,BufNewFile *.frag set filetype=c")
 vim.cmd("autocmd BufRead,BufNewFile *.cu set filetype=c")
+
+-- for Trouble inline errors
+vim.diagnostic.config({ virtual_text = true })
