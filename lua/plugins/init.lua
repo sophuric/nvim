@@ -176,10 +176,6 @@ local lazy_plugins = {
 		config = require("plugins.configs.scrollbar"),
 	},
 	{
-		"github/copilot.vim",
-		lazy = false,
-	},
-	{
 		"mhartington/formatter.nvim",
 		lazy = false,
 		config = require("plugins.configs.formatter"),
