@@ -20,6 +20,7 @@ return function()
 			xml = { require(filetypes .. "xml").xmllint },
 			perl = { require(filetypes .. "perl").perltidy },
 			python = { require(filetypes .. "python").black },
+			nix = { require(filetypes .. "nix").nixfmt },
 			["*"] = { require(filetypes .. "any").remove_trailing_whitespace },
 		},
 	})
